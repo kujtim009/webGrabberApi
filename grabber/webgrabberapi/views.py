@@ -13,4 +13,4 @@ class UrlGrabberView(APIView):
         result = myRequest.getEmails()
         # req = requests.get(url)
         # queryset = Ulset.objects.all().update(statusi=False)
-        return Response({"Emails": result["emails"], "Page_status": result["status"]})
+        return Response({"Emails": result["emails"], "Page_status": result["status"], "url_validity": result["urlValidity"]})
