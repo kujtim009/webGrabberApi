@@ -59,6 +59,7 @@ class CtxRequest(object):
             urlList =  [item for item in urls if urlparse(self.url).netloc == urlparse(item).netloc and self.checkIfurlValid(item) == True]
             linkSet.update(urlList)
             self.linkList = [*list(linkSet)]
+            
             print(urlList)
             return urlList
         return None
@@ -70,6 +71,7 @@ class CtxRequest(object):
         
         for link in self.linkList:
             content = self.__getPageContent(link)
+            # emllst = re.findall(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', content.decode())
             emllst = re.findall(r'[\w\.-]+@[\w\.-]+', content.decode())
 
             if len(emllst) >=1:
