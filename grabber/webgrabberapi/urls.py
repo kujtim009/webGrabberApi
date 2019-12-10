@@ -36,6 +36,7 @@ router = routers.DefaultRouter()
 urlpatterns = [
     path('',include(router.urls)),
     path('graburl/', views.UrlGrabberView.as_view(), name="ulsetupdate"),
+    path('getlinkedindata/', views.linkedinCompanyGrabber.as_view(), name="ulsetupdate")
     # path('graburl/', views.UrlGrabberView.as_view(), basename="graburl")
     # path('ulsetupdate/', views.UlsetUpdateStatus.as_view(), name="ulsetupdate"),
     # path('inserttickets/', views.ShitjaInsertView.as_view(), name="ulsetupdate"),

@@ -13,8 +13,7 @@ class CtxRequest(object):
         self.url_validity = True
 
     def checkIfurlValid(self, url):
-        badUrlExtesions = ['pdf','png','gif','csv','txt','jpg','swf']
-
+        badUrlExtesions = ['pdf', 'png', 'gif', 'csv', 'txt', 'jpg', 'swf']
         regex = re.compile(
         r'^(?:http|ftp)s?://' # http:// or https://
         r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
@@ -29,7 +28,6 @@ class CtxRequest(object):
         return False
 
     def __getPageContent(self, url=None):
-
         urlGo = self.url if url is None else url
         if not self.checkIfurlValid(urlGo):
             self.url_validity = False
@@ -41,7 +39,6 @@ class CtxRequest(object):
         except:
             self.url_status_code = "Error"
             return None
-        
 
         if url is None:
             print("Parsing links: ", self.url, "Status: ", req.status_code)
@@ -59,7 +56,7 @@ class CtxRequest(object):
             urlList =  [item for item in urls if urlparse(self.url).netloc == urlparse(item).netloc and self.checkIfurlValid(item) == True]
             linkSet.update(urlList)
             self.linkList = [*list(linkSet)]
-            
+
             print(urlList)
             return urlList
         return None

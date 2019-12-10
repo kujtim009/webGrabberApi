@@ -14,3 +14,14 @@ class UrlGrabberView(APIView):
         # req = requests.get(url)
         # queryset = Ulset.objects.all().update(statusi=False)
         return Response({"Emails": result["emails"], "Page_status": result["status"], "url_validity": result["urlValidity"]})
+
+
+class linkedinCompanyGrabber(APIView):
+    def get(self, request):
+        url = self.request
+        print("Parsing Started!")
+        myRequest = CtxRequest(url)
+        result = myRequest.getEmails()
+        # req = requests.get(url)
+        # queryset = Ulset.objects.all().update(statusi=False)
+        return Response({"Emails": result["emails"], "Page_status": result["status"], "url_validity": result["urlValidity"]})

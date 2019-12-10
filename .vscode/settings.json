@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "venv\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\Kujtim\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }
