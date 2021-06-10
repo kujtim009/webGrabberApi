@@ -3,7 +3,7 @@ bs4==0.0.1
 certifi==2019.11.28
 chardet==3.0.4
 click==6.7
-Django==2.2.7
+Django==2.2.24
 djangorestframework==3.10.3
 freeze==1.0.10
 idna==2.8
