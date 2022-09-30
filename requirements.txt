@@ -7,7 +7,7 @@ Django==2.2.7
 djangorestframework==3.10.3
 freeze==1.0.10
 idna==2.8
-joblib==0.14.0
+joblib==1.2.0
 numpy==1.17.4
 pandas==0.25.3
 python-dateutil==2.8.1
